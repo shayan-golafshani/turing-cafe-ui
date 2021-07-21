@@ -10,8 +10,8 @@ const Card = ({id,name,date,time,number}) => {
         >
             <h3>Guest Name: {name}</h3>
             <p>Reservation Date: {date}</p>
-            <p>Reservation Time: {time}</p>
-            <p>Reservation Date: {number}</p>
+            <p>Reservation Time: {time} P.M.</p>
+            <p>Party Size: {number}</p>
         </section>
     )
 }
