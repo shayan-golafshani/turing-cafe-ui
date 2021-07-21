@@ -26,10 +26,16 @@ class App extends Component {
     this.setState( {reservations: [...this.state.reservations, res]} )
   }
 
-  // componentDidMount() {
-  //   fetch('http://localhost:3001/api/v1/reservations')
-  //   .then()
-  // }
+  componentDidMount() {
+    fetch('http://localhost:3001/api/v1/reservations')
+    .then(response => {
+        let data = response.json();
+        console.log('THIS IS YOUR DATA', data)
+        console.log(response.json())
+      return response.json()
+    })
+    .catch(err => console.error(err))
+  }
 
   componentDidUpdate() {
     fetch('http://localhost:3001/api/v1/reservations', {
