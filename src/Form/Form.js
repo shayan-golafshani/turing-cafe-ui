@@ -6,8 +6,8 @@ id: 18939837, name: 'Leta', date: '12/3', time: '6:30', number: 2 }
 
 
 class Form extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             guestName:'',
             date:'',
@@ -16,10 +16,31 @@ class Form extends Component {
         }
     }
 
+    clearInputs = () => {
+        this.setState(
+            {   guestName:'',
+                date:'',
+                time:'',
+                number:0,
+            }
+        )
+    }
+
     handleChange = e => {
         this.setState({[e.target.name]: e.target.value})
     }
 
+    submitReservation = e => {
+        e.preventDefault();
+        const newRes = {
+            id: Date.now(),
+            name: this.state.guestName,
+            date: this.state.date,
+            time: this.state.time,
+            number: this.state.number,
+        }
+        this.props.addReservation(newRes);
+    }
 
     render(){
         return(
@@ -40,10 +61,6 @@ class Form extends Component {
                     onChange={e => this.handleChange(e)}
                 />
 
-
-                {
-                    //time
-                }
                 <input
                     type="text"
                     placeholder='Request a time'
@@ -52,10 +69,6 @@ class Form extends Component {
                     onChange={e => this.handleChange(e)}
                 />
 
-
-                {
-                    //number
-                }
                 <input
                     type="number"
                     placeholder='Type your party size'
