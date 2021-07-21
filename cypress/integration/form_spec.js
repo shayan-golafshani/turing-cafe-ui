@@ -1,5 +1,5 @@
 /* Write a test that checks that when data is put into the form, the value is reflected in that form input. */
-describe('Feedback Loop user visits site flows', () => {
+describe('Filling out form user flow', () => {
 
     beforeEach(()=> {
         cy.visit('http://localhost:3000')
