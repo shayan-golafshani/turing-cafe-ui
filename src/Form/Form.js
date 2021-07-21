@@ -49,7 +49,7 @@ class Form extends Component {
             <form>
                 <input
                     type='text'
-                    placeholder='Type name here'
+                    placeholder='Name'
                     name='guestName'
                     value={this.state.guestName}
                     onChange={e => this.handleChange(e)}
@@ -57,7 +57,7 @@ class Form extends Component {
 
                 <input
                     type="text"
-                    placeholder='Select Date'
+                    placeholder='Date (mm/dd)'
                     name='date'
                     value={this.state.date}
                     onChange={e => this.handleChange(e)}
@@ -65,7 +65,7 @@ class Form extends Component {
 
                 <input
                     type="text"
-                    placeholder='Request a time'
+                    placeholder='Time'
                     name='time'
                     value={this.state.time}
                     onChange={e => this.handleChange(e)}
@@ -73,7 +73,7 @@ class Form extends Component {
 
                 <input
                     type="text"
-                    placeholder='Type your party size'
+                    placeholder='Number of guests'
                     name='number'
                     value={this.state.number}
                     onChange={e => this.handleChange(e)}
