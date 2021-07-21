@@ -22,11 +22,19 @@ class Form extends Component {
         return(
             <form>
                 <input
-                type='text'
-                placeholder='Type name here'
-                name='guestName'
-                value={this.state.guestName}
-                onChange={e => this.handleChange(e)}
+                    type='text'
+                    placeholder='Type name here'
+                    name='guestName'
+                    value={this.state.guestName}
+                    onChange={e => this.handleChange(e)}
+                />
+
+                <input
+                    type="text"
+                    placeholder='Select Date'
+                    name='date'
+                    value={this.state.date}
+                    onChange={e => this.handleChange(e)}
                 />
             </form>
         )
