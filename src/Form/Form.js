@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Form.css'
 
 /*
 id: 18939837, name: 'Leta', date: '12/3', time: '6:30', number: 2 }
@@ -12,7 +13,7 @@ class Form extends Component {
             guestName:'',
             date:'',
             time:'',
-            number:0,
+            number:'',
         }
     }
 
@@ -21,7 +22,7 @@ class Form extends Component {
             {   guestName:'',
                 date:'',
                 time:'',
-                number:0,
+                number:'',
             }
         )
     }
@@ -40,6 +41,7 @@ class Form extends Component {
             number: this.state.number,
         }
         this.props.addReservation(newRes);
+        this.clearInputs();
     }
 
     render(){
@@ -70,7 +72,7 @@ class Form extends Component {
                 />
 
                 <input
-                    type="number"
+                    type="text"
                     placeholder='Type your party size'
                     name='number'
                     value={this.state.number}
