@@ -15,7 +15,10 @@ describe('Feedback Loop login flows', () => {
       });
   
     it('Should contain a user reservation card with corresponding info', () => {
-          
+        cy.get('.reservationCard[id="1"]').contains('Guest Name: Christie')
+        cy.get('.reservationCard[id="1"]').contains('Reservation Date: 12/29')
+        cy.get('.reservationCard[id="1"]').contains('Reservation Time: 7:00')
+        cy.get('.reservationCard[id="1"]').contains('Party Size: 12')
     })
     
     it('Should contain four inputs and a submit button', () => {
