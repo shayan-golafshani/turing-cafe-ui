@@ -36,6 +36,31 @@ class Form extends Component {
                     value={this.state.date}
                     onChange={e => this.handleChange(e)}
                 />
+
+
+                {
+                    //time
+                }
+                <input
+                    type="text"
+                    placeholder='Request a time'
+                    name='time'
+                    value={this.state.time}
+                    onChange={e => this.handleChange(e)}
+                />
+
+
+                {
+                    //number
+                }
+                <input
+                    type="number"
+                    placeholder='Type your party size'
+                    name='number'
+                    value={this.state.number}
+                    onChange={e => this.handleChange(e)}
+                />
+
             </form>
         )
     }
