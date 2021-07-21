@@ -1,6 +1,6 @@
 /* dummy test*/
 /*Write tests covering what should be displayed on the page when the user first visits.*/
-describe('Feedback Loop login flows', () => {
+describe('Feedback Loop user visits site flows', () => {
 
     beforeEach(()=> {
         cy.visit('http://localhost:3000')
